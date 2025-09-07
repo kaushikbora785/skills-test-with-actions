@@ -2,6 +2,8 @@
 import sys
 import os
 
+import pytest
+
 # Installed Modules
 # None
 
@@ -75,7 +77,7 @@ def test_area_of_circle_negative_radius(self):
    radius = -1
 
    # Act & Assert
-   with self.assertRaises(ValueError):
+   with pytest.raises(ValueError):
       area_of_circle(radius)
 
 def test_get_nth_fibonacci_negative(self):
@@ -84,5 +86,5 @@ def test_get_nth_fibonacci_negative(self):
    n = -1
 
    # Act & Assert
-   with self.assertRaises(ValueError):
+   with pytest.raises(ValueError):
       get_nth_fibonacci(n)
